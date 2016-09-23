@@ -229,6 +229,7 @@
     <Compile Include="Api\Infrastructure\Exceptions\RolNotFound.cs" />
     <Compile Include="Api\Infrastructure\IdentityExtentions.cs" />
     <Compile Include="Api\Infrastructure\RestExceptions\CommandValidationExceptionRepackager.cs" />
+    <Compile Include="Api\Modules\DesignPatternsModule.cs" />
     <Compile Include="Api\Modules\LoginModule.cs" />
     <Compile Include="Api\Modules\UserAccountModule.cs" />
     <Compile Include="Api\Modules\AdminModule.cs" />

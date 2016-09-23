@@ -1,6 +1,9 @@
 ﻿angular.module('designPatterns.Services').factory('adminService', function ($httpq) {
 
     return {
+        VisitorPattern: function () {
+            return $httpq.get("/testVisitorPattern");
+        },
         BridgePattern: function (customSource) {
             return $httpq.get("/testBridgePattern/" + customSource);
         },

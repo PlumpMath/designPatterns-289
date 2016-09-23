@@ -55,4 +55,10 @@
             $scope.bridgePattern = value;
         });
     }
+    $scope.testVisitorPattern = function () {
+        adminService.VisitorPattern().then(function (value) {
+            $scope.visitorPattern = value;
+        });
+    }
+    
 });

@@ -39,6 +39,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\BlingBag.1.3.3.0\lib\net40\BlingBag.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -78,6 +79,10 @@
     <Compile Include="DesignPattern\StatePattern\TraficLight.cs" />
     <Compile Include="DesignPattern\StatePattern\States\TraficLightState.cs" />
     <Compile Include="DesignPattern\StatePattern\States\YellowState.cs" />
+    <Compile Include="DesignPattern\visitorPattern\MusicLibrary.cs" />
+    <Compile Include="DesignPattern\visitorPattern\IMusicVisistor.cs" />
+    <Compile Include="DesignPattern\visitorPattern\PopRockMusicVisitor.cs" />
+    <Compile Include="DesignPattern\visitorPattern\Song.cs" />
     <Compile Include="DomainEvents\PasswordReset.cs" />
     <Compile Include="DomainEvents\PasswordResetTokenCreated.cs" />
     <Compile Include="DomainEvents\UserAbilitiesAdded.cs" />
