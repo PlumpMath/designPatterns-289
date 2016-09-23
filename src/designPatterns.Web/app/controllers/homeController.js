@@ -60,5 +60,9 @@
             $scope.visitorPattern = value;
         });
     }
-    
+    $scope.testBuilderPattern = function () {
+        adminService.BuilderPattern().then(function (value) {
+            $scope.builderPattern = value;
+        });
+    }
 });

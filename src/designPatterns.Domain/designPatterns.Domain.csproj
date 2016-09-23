@@ -70,6 +70,11 @@
     <Compile Include="DesignPattern\BridgePattern\CableColorTv.cs" />
     <Compile Include="DesignPattern\BridgePattern\MyCustomTv.cs" />
     <Compile Include="DesignPattern\BridgePattern\TigoService.cs" />
+    <Compile Include="DesignPattern\BuilderPattern\CarBuilder.cs" />
+    <Compile Include="DesignPattern\BuilderPattern\Vehicle.cs" />
+    <Compile Include="DesignPattern\BuilderPattern\MotorCycleBuilder.cs" />
+    <Compile Include="DesignPattern\BuilderPattern\Shop.cs" />
+    <Compile Include="DesignPattern\BuilderPattern\VehicleBuilder.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Animal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\IAnimal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Dog.cs" />

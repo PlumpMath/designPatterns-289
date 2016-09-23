@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using designPatterns.Domain.DesignPattern.BridgePattern;
+using designPatterns.Domain.DesignPattern.BuilderPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
 using designPatterns.Domain.DesignPattern.ObserverPattern;
 using designPatterns.Domain.DesignPattern.StatePattern;
 using designPatterns.Domain.DesignPattern.visitorPattern;
 using Nancy;
-using NHibernate.Linq;
 
 namespace designPatterns.Web.Api.Modules
 {
@@ -75,6 +75,15 @@ namespace designPatterns.Web.Api.Modules
                 var songs = musicLibrary.Accept(popRock);
 
                 return songs;
+            };
+
+            Get["/testBuilderPattern"] = _ =>
+            {
+                var shop = new Shop();
+                VehicleBuilder builder = new CarBuilder();
+                shop.Construct(builder);
+                var getBuilderProcess = builder.Vehicle.Show();
+                return getBuilderProcess;
             };
         }
     }
