@@ -75,6 +75,12 @@
     <Compile Include="DesignPattern\BuilderPattern\MotorCycleBuilder.cs" />
     <Compile Include="DesignPattern\BuilderPattern\Shop.cs" />
     <Compile Include="DesignPattern\BuilderPattern\VehicleBuilder.cs" />
+    <Compile Include="DesignPattern\InterpreterPattern\OneExpression.cs" />
+    <Compile Include="DesignPattern\InterpreterPattern\Context.cs" />
+    <Compile Include="DesignPattern\InterpreterPattern\Expression.cs" />
+    <Compile Include="DesignPattern\InterpreterPattern\HundredExpression.cs" />
+    <Compile Include="DesignPattern\InterpreterPattern\TenExpression.cs" />
+    <Compile Include="DesignPattern\InterpreterPattern\ThousandExpression.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Animal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\IAnimal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Dog.cs" />

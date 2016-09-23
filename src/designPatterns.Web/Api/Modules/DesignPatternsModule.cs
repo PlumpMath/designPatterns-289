@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using designPatterns.Domain.DesignPattern.BridgePattern;
 using designPatterns.Domain.DesignPattern.BuilderPattern;
+using designPatterns.Domain.DesignPattern.InterpreterPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
 using designPatterns.Domain.DesignPattern.ObserverPattern;
 using designPatterns.Domain.DesignPattern.StatePattern;
@@ -84,6 +86,26 @@ namespace designPatterns.Web.Api.Modules
                 shop.Construct(builder);
                 var getBuilderProcess = builder.Vehicle.Show();
                 return getBuilderProcess;
+            };
+            Get["/testInterpreterPattern"] = _ =>
+            {
+                const string roman = "MCMXXVIII";
+                var context = new Context(roman);
+
+                var tree = new List<Expression>
+                {
+                    new ThousandExpression(),
+                    new HundredExpression(),
+                    new TenExpression(),
+                    new OneExpression()
+                };
+
+                foreach (var exp in tree)
+                {
+                    exp.Interpret(context);
+                }
+
+                return "Interpreter Input: " + roman + ", Interpreter Output: " + context.Output;
             };
         }
     }
