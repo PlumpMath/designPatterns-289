@@ -4,6 +4,7 @@ using designPatterns.Domain.DesignPattern.BridgePattern;
 using designPatterns.Domain.DesignPattern.BuilderPattern;
 using designPatterns.Domain.DesignPattern.ChainOfResponsabilityPattern;
 using designPatterns.Domain.DesignPattern.InterpreterPattern;
+using designPatterns.Domain.DesignPattern.IteratorPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
 using designPatterns.Domain.DesignPattern.ObserverPattern;
 using designPatterns.Domain.DesignPattern.StatePattern;
@@ -130,6 +131,32 @@ namespace designPatterns.Web.Api.Modules
 
                 p = new Purchase(2036, 122100.00, "Project Z");
                 response += " / " + pamela.ProcessRequest(p);
+                return response;
+            };
+
+            Get["/testIteratorPattern"] = _ =>
+            {
+                var collection = new Collection();
+                collection[0] = new Item("Item 0");
+                collection[1] = new Item("Item 1");
+                collection[2] = new Item("Item 2");
+                collection[3] = new Item("Item 3");
+                collection[4] = new Item("Item 4");
+                collection[5] = new Item("Item 5");
+                collection[6] = new Item("Item 6");
+                collection[7] = new Item("Item 7");
+                collection[8] = new Item("Item 8");
+
+                var iterator = collection.CreateIterator();
+
+                iterator.Step = 2;
+
+                var response = "Iterating over collection:";
+
+                for (var item = iterator.First(); !iterator.IsDone; item = iterator.Next())
+                {
+                    response += item.Name +  " / ";
+                }
                 return response;
             };
         }

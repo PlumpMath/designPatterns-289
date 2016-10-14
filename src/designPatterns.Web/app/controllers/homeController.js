@@ -75,5 +75,9 @@
             $scope.ChainOfResponsabilityPattern = value;
         });
     }
-    
+    $scope.testIteratorPattern = function () {
+        adminService.IteratorPattern().then(function (value) {
+            $scope.IteratorPattern = value;
+        });
+    }
 }); 

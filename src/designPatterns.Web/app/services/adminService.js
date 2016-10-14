@@ -1,6 +1,9 @@
 ﻿angular.module('designPatterns.Services').factory('adminService', function ($httpq) {
 
     return {
+        IteratorPattern: function () {
+            return $httpq.get("/testIteratorPattern");
+        },
         ChainOfResponsabilityPattern: function () {
             return $httpq.get("/testChainOfResponsabilityPattern");
         },

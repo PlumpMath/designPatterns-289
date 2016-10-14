@@ -86,6 +86,11 @@
     <Compile Include="DesignPattern\InterpreterPattern\HundredExpression.cs" />
     <Compile Include="DesignPattern\InterpreterPattern\TenExpression.cs" />
     <Compile Include="DesignPattern\InterpreterPattern\ThousandExpression.cs" />
+    <Compile Include="DesignPattern\IteratorPattern\Iterator.cs" />
+    <Compile Include="DesignPattern\IteratorPattern\Collection.cs" />
+    <Compile Include="DesignPattern\IteratorPattern\IAbstractCollection.cs" />
+    <Compile Include="DesignPattern\IteratorPattern\IAbstractIterator.cs" />
+    <Compile Include="DesignPattern\IteratorPattern\Item.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Animal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\IAnimal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Dog.cs" />
