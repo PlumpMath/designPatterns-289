@@ -75,6 +75,11 @@
     <Compile Include="DesignPattern\BuilderPattern\MotorCycleBuilder.cs" />
     <Compile Include="DesignPattern\BuilderPattern\Shop.cs" />
     <Compile Include="DesignPattern\BuilderPattern\VehicleBuilder.cs" />
+    <Compile Include="DesignPattern\ChainOfResponsabilityPattern\Approver.cs" />
+    <Compile Include="DesignPattern\ChainOfResponsabilityPattern\Purchase.cs" />
+    <Compile Include="DesignPattern\ChainOfResponsabilityPattern\Director.cs" />
+    <Compile Include="DesignPattern\ChainOfResponsabilityPattern\President.cs" />
+    <Compile Include="DesignPattern\ChainOfResponsabilityPattern\VicePresident.cs" />
     <Compile Include="DesignPattern\InterpreterPattern\OneExpression.cs" />
     <Compile Include="DesignPattern\InterpreterPattern\Context.cs" />
     <Compile Include="DesignPattern\InterpreterPattern\Expression.cs" />

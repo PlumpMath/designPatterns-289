@@ -70,4 +70,10 @@
             $scope.InterpreterPattern = value;
         });
     }
+    $scope.testChainOfResponsabilityPattern = function () {
+        adminService.ChainOfResponsabilityPattern().then(function (value) {
+            $scope.ChainOfResponsabilityPattern = value;
+        });
+    }
+    
 }); 

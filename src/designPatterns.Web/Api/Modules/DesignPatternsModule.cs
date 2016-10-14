@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using designPatterns.Domain.DesignPattern.BridgePattern;
 using designPatterns.Domain.DesignPattern.BuilderPattern;
+using designPatterns.Domain.DesignPattern.ChainOfResponsabilityPattern;
 using designPatterns.Domain.DesignPattern.InterpreterPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
 using designPatterns.Domain.DesignPattern.ObserverPattern;
@@ -106,6 +107,30 @@ namespace designPatterns.Web.Api.Modules
                 }
 
                 return "Interpreter Input: " + roman + ", Interpreter Output: " + context.Output;
+            };
+
+            Get["/testChainOfResponsabilityPattern"] = _ =>
+            {
+                var response = "";
+                var pamela = new Director();
+                var byron = new VicePresident();
+                var colin = new President();
+
+                pamela.SetSuccessor(byron);
+                byron.SetSuccessor(colin);
+                
+                var p = new Purchase(2034, 350.00, "Assets");
+                response = pamela.ProcessRequest(p);
+
+                p = new Purchase(2035, 32590.10, "Project X");
+                response += " / " + pamela.ProcessRequest(p);
+
+                p = new Purchase(2036, 90000.00, "Project Y");
+                response += " / " + pamela.ProcessRequest(p);
+
+                p = new Purchase(2036, 122100.00, "Project Z");
+                response += " / " + pamela.ProcessRequest(p);
+                return response;
             };
         }
     }
