@@ -4,6 +4,7 @@ using designPatterns.Domain.DesignPattern.AdapterPattern;
 using designPatterns.Domain.DesignPattern.BridgePattern;
 using designPatterns.Domain.DesignPattern.BuilderPattern;
 using designPatterns.Domain.DesignPattern.ChainOfResponsabilityPattern;
+using designPatterns.Domain.DesignPattern.CommandPattern;
 using designPatterns.Domain.DesignPattern.InterpreterPattern;
 using designPatterns.Domain.DesignPattern.IteratorPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
@@ -176,6 +177,21 @@ namespace designPatterns.Web.Api.Modules
                 var ethanol = new RichCompound("Ethanol");
                 response += " / " + ethanol.Display();
 
+                return response;
+            };
+
+            Get["/testCommandPattern"] = _ =>
+            {
+                var response = "";
+                var user = new User();
+
+                response += user.Compute('+', 100) + " / ";
+                response += user.Compute('-', 50) + " / ";
+                response += user.Compute('*', 10) + " / ";
+                response += user.Compute('/', 2) + " / ";
+
+                response += user.Undo(4) + " / ";
+                response += user.Redo(3);
                 return response;
             };
         }

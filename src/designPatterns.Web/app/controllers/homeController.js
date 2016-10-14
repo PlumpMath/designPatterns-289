@@ -85,4 +85,9 @@
             $scope.AdapterPattern = value;
         });
     }
+    $scope.testCommandPattern = function() {
+        adminService.CommandPattern().then(function (value) {
+            $scope.CommandPattern = value;
+        });
+    }
 }); 
