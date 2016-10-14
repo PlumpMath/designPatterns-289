@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using designPatterns.Domain.DesignPattern.AdapterPattern;
 using designPatterns.Domain.DesignPattern.BridgePattern;
 using designPatterns.Domain.DesignPattern.BuilderPattern;
 using designPatterns.Domain.DesignPattern.ChainOfResponsabilityPattern;
@@ -157,6 +158,24 @@ namespace designPatterns.Web.Api.Modules
                 {
                     response += item.Name +  " / ";
                 }
+                return response;
+            };
+
+            Get["/testAdapterPattern"] = _ =>
+            {
+                var response = "";
+                var unknown = new Compound("Unknown");
+                response += " / " + unknown.Display();
+
+                var water = new RichCompound("Water");
+                response += " / " + water.Display();
+
+                var benzene = new RichCompound("Benzene");
+                response += " / " + benzene.Display();
+
+                var ethanol = new RichCompound("Ethanol");
+                response += " / " + ethanol.Display();
+
                 return response;
             };
         }

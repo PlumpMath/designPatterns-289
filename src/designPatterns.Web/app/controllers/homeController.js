@@ -80,4 +80,9 @@
             $scope.IteratorPattern = value;
         });
     }
+    $scope.testAdapterPattern = function () {
+        adminService.AdapterPattern().then(function (value) {
+            $scope.AdapterPattern = value;
+        });
+    }
 }); 
