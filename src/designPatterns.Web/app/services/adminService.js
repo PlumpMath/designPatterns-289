@@ -1,6 +1,9 @@
 ﻿angular.module('designPatterns.Services').factory("adminService", function ($httpq) {
 
     return {
+        TemplatePattern: function () {
+            return $httpq.get("/testTemplatePattern");
+        },
         StrategyPattern: function () {
             return $httpq.get("/testStrategyPattern");
         },

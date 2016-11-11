@@ -12,6 +12,7 @@ using designPatterns.Domain.DesignPattern.NullObjectPattern;
 using designPatterns.Domain.DesignPattern.ObserverPattern;
 using designPatterns.Domain.DesignPattern.StatePattern;
 using designPatterns.Domain.DesignPattern.StrategyPattern;
+using designPatterns.Domain.DesignPattern.TemplateMethodPattern;
 using designPatterns.Domain.DesignPattern.visitorPattern;
 using Nancy;
 
@@ -232,7 +233,17 @@ namespace designPatterns.Web.Api.Modules
                 response += "ShellSort: " + studentRecords.Sort() + " -- ";
 
                 studentRecords.SetSortStrategy(new MergeSort());
-                response += "MergeSort: " + studentRecords.Sort() + " -- ";
+                response += "MergeSort: " + studentRecords.Sort();
+                return response;
+            };
+            Get["/testTemplatePattern"] = _ =>
+            {
+                var response = "";
+                AbstractClass aA = new ConcreteClassA();
+                response += aA.TemplateMethod();
+
+                AbstractClass aB = new ConcreteClassB();
+                response += aB.TemplateMethod();
                 return response;
             };
         }

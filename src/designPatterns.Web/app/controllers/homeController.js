@@ -100,4 +100,9 @@
             $scope.StrategyPattern = value;
         });
     }
+    $scope.testTemplatePattern = function () {
+        adminService.TemplatePattern().then(function (value) {
+            $scope.TemplatePattern = value;
+        });
+    }
 }); 
