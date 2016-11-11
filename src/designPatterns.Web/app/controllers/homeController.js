@@ -90,4 +90,14 @@
             $scope.CommandPattern = value;
         });
     }
+    $scope.testFactoryPattern = function () {
+        adminService.FactoryPattern().then(function (value) {
+            $scope.FactoryPattern = value;
+        });
+    }
+    $scope.testStrategyPattern = function () {
+        adminService.StrategyPattern().then(function (value) {
+            $scope.StrategyPattern = value;
+        });
+    }
 }); 

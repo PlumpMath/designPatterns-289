@@ -1,10 +1,15 @@
-﻿angular.module('designPatterns.Services').factory('adminService', function ($httpq) {
+﻿angular.module('designPatterns.Services').factory("adminService", function ($httpq) {
 
     return {
-        AdapterPattern
-            : function () {
+        StrategyPattern: function () {
+            return $httpq.get("/testStrategyPattern");
+        },
+        FactoryPattern: function () {
+            return $httpq.get("/testFactoryPattern");
+        },
+        AdapterPattern: function () {
             return $httpq.get("/testAdapterPattern");
-            },
+        },
         CommandPattern: function () {
             return $httpq.get("/testCommandPattern");
         },

@@ -5,11 +5,13 @@ using designPatterns.Domain.DesignPattern.BridgePattern;
 using designPatterns.Domain.DesignPattern.BuilderPattern;
 using designPatterns.Domain.DesignPattern.ChainOfResponsabilityPattern;
 using designPatterns.Domain.DesignPattern.CommandPattern;
+using designPatterns.Domain.DesignPattern.factoryPattern;
 using designPatterns.Domain.DesignPattern.InterpreterPattern;
 using designPatterns.Domain.DesignPattern.IteratorPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
 using designPatterns.Domain.DesignPattern.ObserverPattern;
 using designPatterns.Domain.DesignPattern.StatePattern;
+using designPatterns.Domain.DesignPattern.StrategyPattern;
 using designPatterns.Domain.DesignPattern.visitorPattern;
 using Nancy;
 
@@ -192,6 +194,45 @@ namespace designPatterns.Web.Api.Modules
 
                 response += user.Undo(4) + " / ";
                 response += user.Redo(3);
+                return response;
+            };
+            Get["/testFactoryPattern"] = _ =>
+            {
+                var response = "";
+                var documents = new Document[2];
+
+                documents[0] = new Resume();
+                documents[1] = new Report();
+
+                foreach (var document in documents)
+                {
+                    response += document.GetType().Name + "--";
+                    foreach (var page in document.Pages)
+                    {
+                        response += " " + page.GetType().Name;
+                    }
+                }
+                return response;
+            };
+            Get["/testStrategyPattern"] = _ =>
+            {
+                var response = "";
+                var studentRecords = new SortedList();
+
+                studentRecords.Add("Samual");
+                studentRecords.Add("Jimmy");
+                studentRecords.Add("Sandra");
+                studentRecords.Add("Vivek");
+                studentRecords.Add("Anna");
+
+                studentRecords.SetSortStrategy(new QuickSort());
+                response += "Quicksort: " + studentRecords.Sort() + " -- ";
+
+                studentRecords.SetSortStrategy(new ShellSort());
+                response += "ShellSort: " + studentRecords.Sort() + " -- ";
+
+                studentRecords.SetSortStrategy(new MergeSort());
+                response += "MergeSort: " + studentRecords.Sort() + " -- ";
                 return response;
             };
         }
