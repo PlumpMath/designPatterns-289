@@ -105,4 +105,9 @@
             $scope.TemplatePattern = value;
         });
     }
+    $scope.testFacadePattern = function () {
+        adminService.FacadePattern().then(function (value) {
+            $scope.FacadePattern = value;
+        });
+    }
 }); 

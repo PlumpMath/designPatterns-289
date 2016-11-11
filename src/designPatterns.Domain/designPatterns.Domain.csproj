@@ -89,6 +89,11 @@
     <Compile Include="DesignPattern\CommandPattern\CalculatorCommand.cs" />
     <Compile Include="DesignPattern\CommandPattern\User.cs" />
     <Compile Include="DesignPattern\CommandPattern\Command.cs" />
+    <Compile Include="DesignPattern\FacadePattern\Bank.cs" />
+    <Compile Include="DesignPattern\FacadePattern\Mortgage.cs" />
+    <Compile Include="DesignPattern\FacadePattern\Credit.cs" />
+    <Compile Include="DesignPattern\FacadePattern\Customer.cs" />
+    <Compile Include="DesignPattern\FacadePattern\Loan.cs" />
     <Compile Include="DesignPattern\factoryPattern\BibliographyPage.cs" />
     <Compile Include="DesignPattern\factoryPattern\Report.cs" />
     <Compile Include="DesignPattern\factoryPattern\ConclusionPage.cs" />

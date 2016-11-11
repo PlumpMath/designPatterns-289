@@ -6,6 +6,7 @@ using designPatterns.Domain.DesignPattern.BuilderPattern;
 using designPatterns.Domain.DesignPattern.ChainOfResponsabilityPattern;
 using designPatterns.Domain.DesignPattern.CommandPattern;
 using designPatterns.Domain.DesignPattern.factoryPattern;
+using designPatterns.Domain.DesignPattern.FacadePattern;
 using designPatterns.Domain.DesignPattern.InterpreterPattern;
 using designPatterns.Domain.DesignPattern.IteratorPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
@@ -244,6 +245,17 @@ namespace designPatterns.Web.Api.Modules
 
                 AbstractClass aB = new ConcreteClassB();
                 response += aB.TemplateMethod();
+                return response;
+            };
+            Get["/testFacadePattern"] = _ =>
+            {
+                var response = "";
+                var mortgage = new Mortgage();
+
+                var customer = new Customer("Ann McKinsey");
+                var eligible = mortgage.IsEligible(customer, 125000);
+
+                response += customer.Name + " has been " + (eligible ? "Approved" : "Rejected");
                 return response;
             };
         }
