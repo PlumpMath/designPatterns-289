@@ -1,4 +1,4 @@
 ﻿<connectionStrings>
   <add name="local" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=designPatterns;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"></add>
-  <add name="qa" connectionString="Server=tcp:kbs9qidapp.database.windows.net,1433;Database=designPatterns;User ID=acklendev@kbs9qidapp;Password=y@rds@l3;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;"></add>
+  <add name="qa" connectionString="Server=4591015e-7bba-462a-9c28-a6c200e65b57.sqlserver.sequelizer.com;database=db4591015e7bba462a9c28a6c200e65b57;User ID=zhscvvjjzgmzhhan;Password=x8YvsPJr2yfhiSsXLxDfFZgV6PHH8X7AvGhnrraoQBmzTpnm6Ns3V58E2dyLfard;Trusted_Connection=False;Connection Timeout=1000;"></add>
 </connectionStrings>
