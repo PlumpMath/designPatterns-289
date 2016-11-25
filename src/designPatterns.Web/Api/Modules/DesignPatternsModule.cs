@@ -11,6 +11,7 @@ using designPatterns.Domain.DesignPattern.FlyweightPattern;
 using designPatterns.Domain.DesignPattern.InterpreterPattern;
 using designPatterns.Domain.DesignPattern.IteratorPattern;
 using designPatterns.Domain.DesignPattern.MediatorPattern;
+using designPatterns.Domain.DesignPattern.MomentoPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
 using designPatterns.Domain.DesignPattern.ObserverPattern;
 using designPatterns.Domain.DesignPattern.StatePattern;
@@ -297,6 +298,26 @@ namespace designPatterns.Web.Api.Modules
                     var character = factory.GetCharacter(c);
                     response += character.Display(pointSize) +" ";
                 }
+                return response;
+            };
+            Get["/testMomentoPattern"] = _ =>
+            {
+                var response = "Save Sales, Restore Memento";
+                var s = new SalesProspect
+                {
+                    Name = "Noel van Halen",
+                    Phone = "(412) 256-0990",
+                    Budget = 25000.0
+                };
+
+                var m = new ProspectMemory {Memento = s.SaveMemento()};
+
+                s.Name = "Leo Welch";
+                s.Phone = "(310) 209-7111";
+                s.Budget = 1000000.0;
+
+                s.RestoreMemento(m.Memento);
+
                 return response;
             };
         }
