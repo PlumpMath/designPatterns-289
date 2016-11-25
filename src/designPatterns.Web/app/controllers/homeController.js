@@ -110,4 +110,9 @@
             $scope.FacadePattern = value;
         });
     }
+    $scope.testMediatorPattern = function () {
+        adminService.MediatorPattern().then(function (value) {
+            $scope.MediatorPattern = value;
+        });
+    }
 }); 

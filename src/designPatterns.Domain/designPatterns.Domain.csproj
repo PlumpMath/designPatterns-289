@@ -117,6 +117,11 @@
     <Compile Include="DesignPattern\IteratorPattern\IAbstractCollection.cs" />
     <Compile Include="DesignPattern\IteratorPattern\IAbstractIterator.cs" />
     <Compile Include="DesignPattern\IteratorPattern\Item.cs" />
+    <Compile Include="DesignPattern\MediatorPattern\AbstractChatroom.cs" />
+    <Compile Include="DesignPattern\MediatorPattern\Beatle.cs" />
+    <Compile Include="DesignPattern\MediatorPattern\Chatroom.cs" />
+    <Compile Include="DesignPattern\MediatorPattern\NonBeatle.cs" />
+    <Compile Include="DesignPattern\MediatorPattern\Participant.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Animal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\IAnimal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Dog.cs" />

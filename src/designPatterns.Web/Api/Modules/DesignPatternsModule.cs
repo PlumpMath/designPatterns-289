@@ -9,6 +9,7 @@ using designPatterns.Domain.DesignPattern.factoryPattern;
 using designPatterns.Domain.DesignPattern.FacadePattern;
 using designPatterns.Domain.DesignPattern.InterpreterPattern;
 using designPatterns.Domain.DesignPattern.IteratorPattern;
+using designPatterns.Domain.DesignPattern.MediatorPattern;
 using designPatterns.Domain.DesignPattern.NullObjectPattern;
 using designPatterns.Domain.DesignPattern.ObserverPattern;
 using designPatterns.Domain.DesignPattern.StatePattern;
@@ -256,6 +257,28 @@ namespace designPatterns.Web.Api.Modules
                 var eligible = mortgage.IsEligible(customer, 125000);
 
                 response += customer.Name + " has been " + (eligible ? "Approved" : "Rejected");
+                return response;
+            };
+            Get["/mediatorPattern"] = _ =>
+            {
+                var response = "";
+                var chatroom = new Chatroom();
+
+                Participant paul = new Beatle("Paul");
+                Participant john = new Beatle("John");
+                Participant yoko = new NonBeatle("Yoko");
+                Participant ringo = new Beatle("Ringo");
+
+                chatroom.Register(paul);
+                chatroom.Register(john);
+                chatroom.Register(yoko);
+                chatroom.Register(ringo);
+
+                response += yoko.Send("John", "Hi John!") + " ";
+                response += paul.Send("Ringo", "All you need is love") + " ";
+                response += paul.Send("John", "Can't buy me love") + " ";
+                response += john.Send("Yoko", "My sweet love");
+
                 return response;
             };
         }
