@@ -7,6 +7,7 @@ using designPatterns.Domain.DesignPattern.ChainOfResponsabilityPattern;
 using designPatterns.Domain.DesignPattern.CommandPattern;
 using designPatterns.Domain.DesignPattern.factoryPattern;
 using designPatterns.Domain.DesignPattern.FacadePattern;
+using designPatterns.Domain.DesignPattern.FlyweightPattern;
 using designPatterns.Domain.DesignPattern.InterpreterPattern;
 using designPatterns.Domain.DesignPattern.IteratorPattern;
 using designPatterns.Domain.DesignPattern.MediatorPattern;
@@ -279,6 +280,23 @@ namespace designPatterns.Web.Api.Modules
                 response += paul.Send("John", "Can't buy me love") + " ";
                 response += john.Send("Yoko", "My sweet love");
 
+                return response;
+            };
+            Get["/testFlyweightPattern"] = _ =>
+            {
+                var response = "";
+                const string document = "AAZZBBZB";
+                var chars = document.ToCharArray();
+
+                var factory = new CharacterFactory();
+                var pointSize = 10;
+
+                foreach (var c in chars)
+                {
+                    pointSize++;
+                    var character = factory.GetCharacter(c);
+                    response += character.Display(pointSize) +" ";
+                }
                 return response;
             };
         }

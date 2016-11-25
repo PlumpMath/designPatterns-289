@@ -106,6 +106,11 @@
     <Compile Include="DesignPattern\factoryPattern\Resume.cs" />
     <Compile Include="DesignPattern\factoryPattern\SkillsPage.cs" />
     <Compile Include="DesignPattern\factoryPattern\SummaryPage.cs" />
+    <Compile Include="DesignPattern\FlyweightPattern\Character.cs" />
+    <Compile Include="DesignPattern\FlyweightPattern\CharacterA.cs" />
+    <Compile Include="DesignPattern\FlyweightPattern\CharacterB.cs" />
+    <Compile Include="DesignPattern\FlyweightPattern\CharacterFactory.cs" />
+    <Compile Include="DesignPattern\FlyweightPattern\CharacterZ.cs" />
     <Compile Include="DesignPattern\InterpreterPattern\OneExpression.cs" />
     <Compile Include="DesignPattern\InterpreterPattern\Context.cs" />
     <Compile Include="DesignPattern\InterpreterPattern\Expression.cs" />

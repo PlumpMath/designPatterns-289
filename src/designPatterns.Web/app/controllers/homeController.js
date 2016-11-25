@@ -115,4 +115,9 @@
             $scope.MediatorPattern = value;
         });
     }
+    $scope.testFlyweightPattern = function () {
+        adminService.FlyweightPattern().then(function (value) {
+            $scope.FlyweightPattern = value;
+        });
+    }
 }); 
