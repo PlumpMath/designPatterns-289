@@ -148,6 +148,8 @@
     <Compile Include="DesignPattern\TemplateMethodPattern\AbstractClass.cs" />
     <Compile Include="DesignPattern\TemplateMethodPattern\ConcreteClassB.cs" />
     <Compile Include="DesignPattern\TemplateMethodPattern\ConcreteClassA.cs" />
+    <Compile Include="DesignPattern\TransactionScriptPattern\EmployeeDto.cs" />
+    <Compile Include="DesignPattern\TransactionScriptPattern\HolidayService.cs" />
     <Compile Include="DesignPattern\visitorPattern\MusicLibrary.cs" />
     <Compile Include="DesignPattern\visitorPattern\IMusicVisistor.cs" />
     <Compile Include="DesignPattern\visitorPattern\PopRockMusicVisitor.cs" />

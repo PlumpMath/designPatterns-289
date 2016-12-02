@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using designPatterns.Domain.DesignPattern.AdapterPattern;
 using designPatterns.Domain.DesignPattern.BridgePattern;
 using designPatterns.Domain.DesignPattern.BuilderPattern;
@@ -18,6 +19,7 @@ using designPatterns.Domain.DesignPattern.ObserverPattern;
 using designPatterns.Domain.DesignPattern.StatePattern;
 using designPatterns.Domain.DesignPattern.StrategyPattern;
 using designPatterns.Domain.DesignPattern.TemplateMethodPattern;
+using designPatterns.Domain.DesignPattern.TransactionScriptPattern;
 using designPatterns.Domain.DesignPattern.visitorPattern;
 using Nancy;
 
@@ -329,6 +331,15 @@ namespace designPatterns.Web.Api.Modules
 
                 response += dispatch.Foo<int>(x);
                 response += dispatch.Foo<string>(x.ToString());
+                return response;
+            };
+            Get["/testTransactionScriptPattern"] = _ =>
+            {
+                var response = "";
+                response += "Booked Holiday: " + HolidayService.BookHolidayFor(1, new DateTime(2016, 12, 31), new DateTime(2017, 1, 5)) + " - ";
+                response += "Employes Leaving in Holiday: "  + string.Join(", ", HolidayService.GetAllEmployeesOnLeaveBetween(new DateTime(2016, 12, 31),
+                    new DateTime(2017, 1, 5)).Select(x=> x.Name)) + " - ";
+                response += "Employes without Holiday: " + string.Join(", ", HolidayService.GetAllEmployeesWithHolidayRemaining().Select(x => x.Name));
                 return response;
             };
         }

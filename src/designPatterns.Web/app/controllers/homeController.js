@@ -125,4 +125,9 @@
             $scope.DoubleDispatchPattern = value;
         });
     }
+    $scope.testTransactionScriptPattern = function () {
+        adminService.TransactionScriptPattern().then(function (value) {
+            $scope.TransactionScriptPattern = value;
+        });
+    }
 }); 

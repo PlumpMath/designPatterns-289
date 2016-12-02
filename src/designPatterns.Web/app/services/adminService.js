@@ -1,6 +1,9 @@
 ﻿angular.module("designPatterns.Services").factory("adminService", function ($httpq) {
 
     return {
+        TransactionScriptPattern: function () {
+            return $httpq.get("/testTransactionScriptPattern");
+        },
         DoubleDispatchPattern: function () {
             return $httpq.get("/testDoubleDispatchPattern");
         },
