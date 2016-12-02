@@ -5,6 +5,7 @@ using designPatterns.Domain.DesignPattern.BridgePattern;
 using designPatterns.Domain.DesignPattern.BuilderPattern;
 using designPatterns.Domain.DesignPattern.ChainOfResponsabilityPattern;
 using designPatterns.Domain.DesignPattern.CommandPattern;
+using designPatterns.Domain.DesignPattern.DoubleDispatch;
 using designPatterns.Domain.DesignPattern.factoryPattern;
 using designPatterns.Domain.DesignPattern.FacadePattern;
 using designPatterns.Domain.DesignPattern.FlyweightPattern;
@@ -318,6 +319,16 @@ namespace designPatterns.Web.Api.Modules
 
                 s.RestoreMemento(m.Memento);
 
+                return response;
+            };
+            Get["/testDoubleDispatchPattern"] = _ =>
+            {
+                var response = "";
+                object x = 5;
+                var dispatch = new DoubleDispatch();
+
+                response += dispatch.Foo<int>(x);
+                response += dispatch.Foo<string>(x.ToString());
                 return response;
             };
         }

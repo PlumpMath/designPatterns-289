@@ -89,6 +89,7 @@
     <Compile Include="DesignPattern\CommandPattern\CalculatorCommand.cs" />
     <Compile Include="DesignPattern\CommandPattern\User.cs" />
     <Compile Include="DesignPattern\CommandPattern\Command.cs" />
+    <Compile Include="DesignPattern\DoubleDispatch\DoubleDispatch.cs" />
     <Compile Include="DesignPattern\FacadePattern\Bank.cs" />
     <Compile Include="DesignPattern\FacadePattern\Mortgage.cs" />
     <Compile Include="DesignPattern\FacadePattern\Credit.cs" />
@@ -127,6 +128,9 @@
     <Compile Include="DesignPattern\MediatorPattern\Chatroom.cs" />
     <Compile Include="DesignPattern\MediatorPattern\NonBeatle.cs" />
     <Compile Include="DesignPattern\MediatorPattern\Participant.cs" />
+    <Compile Include="DesignPattern\MomentoPattern\ProspectMemory.cs" />
+    <Compile Include="DesignPattern\MomentoPattern\Memento.cs" />
+    <Compile Include="DesignPattern\MomentoPattern\SalesProspect.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Animal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\IAnimal.cs" />
     <Compile Include="DesignPattern\NullObjectPattern\Dog.cs" />

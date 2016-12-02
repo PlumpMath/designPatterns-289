@@ -1,6 +1,9 @@
 ﻿angular.module("designPatterns.Services").factory("adminService", function ($httpq) {
 
     return {
+        DoubleDispatchPattern: function () {
+            return $httpq.get("/testDoubleDispatchPattern");
+        },
         FlyweightPattern: function () {
             return $httpq.get("/testFlyweightPattern");
         },

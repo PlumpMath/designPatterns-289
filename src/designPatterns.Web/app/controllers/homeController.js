@@ -120,4 +120,9 @@
             $scope.FlyweightPattern = value;
         });
     }
+    $scope.testDoubleDispatchPattern = function () {
+        adminService.DoubleDispatchPattern().then(function (value) {
+            $scope.DoubleDispatchPattern = value;
+        });
+    }
 }); 
